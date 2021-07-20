@@ -1,8 +1,8 @@
 # Expense-Reimbursement-System
 ## Project Description
-Expense Reimbursement System is an application that allows users to sign-in and submit their expense reimbursement requests.
+Expense Reimbursement System (ERS) is a web application that allows users to sign-in and submit requests for reimbursing work related expenses.
 
-# Technologies used
+## Technologies used
 
 - Python
 - Flask
@@ -16,7 +16,7 @@ Expense Reimbursement System is an application that allows users to sign-in and 
 - Cucumber
 
 
-# Project Features
+## Project Features
 
 - Employees can login to the system and submit reimbursement requests.
 - Employees can view a table of their past/pending requests.
