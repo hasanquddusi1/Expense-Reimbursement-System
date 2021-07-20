@@ -1,0 +1,24 @@
+<testsuite name="employee.Employee Portal" tests="2" errors="0" failures="0" skipped="0" time="3.161999" timestamp="2021-07-12T00:11:28.654931" hostname="DESKTOP-7VC2O0B"><testcase classname="employee.Employee Portal" name="An employee is on the home page of Expense Reimbursement System and would like to login" status="passed" time="2.252"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: An employee is on the home page of Expense Reimbursement System and would like to login
+    Given An employee is on the home page of Expense Reimbursement System ... passed in 0.509s
+    When the employee clicks on the employee login button ... passed in 1.677s
+    Then the employee is redirected to the employee login portal ... passed in 0.066s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="employee.Employee Portal" name="An employee is on the login portal of employee and would like to login with correct credentials." status="passed" time="0.909999"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: An employee is on the login portal of employee and would like to login with correct credentials.
+    Given An employee is on the employee login portal ... passed in 0.075s
+    Then an employee enters the correct username and the correct password ... passed in 0.117s
+    When the employee clicks the login button ... passed in 0.712s
+    Then the employee is redirected to the reimbursement request form page ... passed in 0.006s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

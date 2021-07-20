@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/style.css') }}"
+    />
+    <title>Past and Pending Requests</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="heading">
+        <h2>Expense Sheet</h2>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Item</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Purpose</th>
+              <th scope="col">Status</th>
+              <th scope="col">Manager</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for request in requests %}
+            <tr>
+              <td>{{ request[0] }}</td>
+              <td>{{ request[1] }}</td>
+              <td>{{ request[2] }}</td>
+              <td>${{ request[3] }}</td>
+              <td>{{ request[4] }}</td>
+              <td>{{ request[5] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <style>
+    body {
+      background-color: #212121;
+      color: white;
+    }
+  </style>
+</html>

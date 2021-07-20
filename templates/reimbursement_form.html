@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/style.css') }}"
+    />
+    <title>Expense Reimbursement Form</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="heading">
+        <h2>Reimbursement Request Form</h2>
+        <p>Please fill out the reimbursement form below</p>
+        <form action="{{url_for('reimbursement_request')}}" method="POST">
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Employee ID"
+              name="emp_id"
+              id="emp_id"
+              required
+            />
+          </div>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Item"
+              name="item"
+              id="item"
+              required
+            />
+          </div>
+
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Cost"
+              name="cost"
+              id="cost"
+              required
+            />
+          </div>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Purpose"
+              name="purpose"
+              id="purpose"
+              required
+            />
+          </div>
+          <button id ="submit_reimb_form" type="submit" class="float">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="login">
+      <div class="heading">
+        <h3>View Past/Pending Requests</h3>
+      <p>
+        Please enter your Employee ID below to retrieve all past and pending
+        requests
+      </p>
+      <form action="{{url_for('view_all_requests')}}" method="POST">
+        <input
+          title="employee id Form"
+          class="form-control"
+          placeholder="Employee ID"
+          name="emp_id"
+          required
+        />
+        <button type="submit" class="float">View Requests</button>
+      </form>
+    </div>
+       </div>
+    </div>
+  </body>
+  <style>
+    body {
+      background-color: #212121;
+      color: white;
+    }
+  </style>
+</html>

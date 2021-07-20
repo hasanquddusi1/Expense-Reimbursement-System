@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/style.css') }}"
+    />
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="heading">
+        <h2>Welcome back</h2>
+     
+        <form action="{{url_for('validate_manager')}}" method="POST">
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input
+              title="username Form"
+              type="text"
+              class="form-control"
+              id="mgr-usr"
+              placeholder="Username"
+              name="mgr_name"
+              required
+            />
+          </div>
+
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <input
+              type="password"
+              class="form-control"
+              id="mgr-pwd"
+              placeholder="Password"
+              name="mgr_password"
+              required
+            />
+          </div>
+
+          <button   id="login-button"type="submit" class="float">Login</button>
+        </form>
+        {{message}}
+    </div>
+  </body>
+  <style>
+    body {
+      background-color: #212121;
+      color: white;
+    }
+  </style>
+</html>
